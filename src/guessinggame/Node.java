@@ -7,11 +7,7 @@ public class Node {
     Node no;
     
     public boolean isLeaf() {
-        if (this.no == null && this.yes == null) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.no == null && this.yes == null;
     }
 
     public Node(String q) {
@@ -22,8 +18,6 @@ public class Node {
 
     @Override
     public String toString() {
-        return "Node { question: " + this.question
-                + " yes: " + this.yes.toString() + " no: "
-                + this.no.toString() + " }.";
+        return "Node { question: " + this.question + " }.";
     }
 }
